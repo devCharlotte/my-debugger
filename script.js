@@ -37,7 +37,7 @@ function OnlineDebugger() {
           </select>
 
           <label>input code</label>
-          <textarea value={code} onChange={(e) => setCode(e.target.value)}></textarea>
+          <textarea value={code} onChange={(e) => setCode(e.target.value)} className="large-textarea"></textarea>
 
           <button onClick={executeCode}>run</button>
         </div>
