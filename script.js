@@ -33,12 +33,12 @@ export default function OnlineDebugger() {
         <CardContent className="p-6">
           <h2 className="text-xl font-bold text-center mb-4">online debugger by Joonhee</h2>
           <div className="flex gap-4">
-            <div className="w-1/2">
+            <div className="w-1/2 flex flex-col">
               <label className="block mb-2">language</label>
               <Select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
-                className="w-full"
+                className="w-full border p-2 rounded"
               >
                 <option value="javascript">JavaScript</option>
                 <option value="python">Python</option>
@@ -49,13 +49,13 @@ export default function OnlineDebugger() {
               <Textarea
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
-                className="w-full h-40 font-mono text-sm border rounded p-2"
+                className="w-full h-40 font-mono text-sm border rounded p-2 bg-white"
               />
               <Button onClick={executeCode} className="mt-4 w-full bg-pink-500 hover:bg-pink-700 text-white py-2 rounded">
                 run
               </Button>
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 flex flex-col">
               <label className="block mb-2">output</label>
               <pre className="w-full h-40 bg-black text-white p-4 rounded overflow-auto text-sm">
                 {output || "출력 결과 없음"}
